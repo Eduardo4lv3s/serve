@@ -1,5 +1,5 @@
 from PIL import Image
 
-image = Image.open("imagem_1.jpg")
+image = Image.open("nova.png")
 print(image.getpixel((10,10)))
 image.show()
