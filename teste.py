@@ -1,7 +1,15 @@
-with open("imagem_1.jpg", "rb") as arqui_bytes:
-    convertido_bytes = arqui_bytes.read()
+import math
 
-a = 2
+with open("imagem.jpg", "rb") as arqui_bytes:
+    convertido_bit = []
+    for x in arqui_bytes.read():
+        convertido_bit.append(format(x, "0>8b"))
 
-print(convertido_bytes)
-#print((255).to_bytes(a))
+a = 0
+r = round(math.sqrt(194615))
+
+if r * r > 194615:
+    a = 2
+    
+print(len(convertido_bit))
+print()
